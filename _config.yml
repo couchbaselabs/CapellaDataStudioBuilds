@@ -26,7 +26,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 # url: "https://couchbaselabs.github.io" # If labs.couchbase.com is redirected to this
 # baseurl: "/CapellaDataStudioBuilds" # If your site is at .../CapellaDataStudioBuilds
-url: "http://labs.couchbase.com/CapellaDataStudioBuilds/" # If labs.couchbase.com is redirected to this
+url: "https://labs.couchbase.com/CapellaDataStudioBuilds/" # If labs.couchbase.com is redirected to this
 baseurl: "" # If your site is at .../CapellaDataStudioBuilds
 twitter_username: jekyllrb
 github_username:  jekyll
