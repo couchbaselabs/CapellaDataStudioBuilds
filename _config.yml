@@ -24,14 +24,16 @@ description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-url: "https://couchbaselabs.github.io" # If labs.couchbase.com is redirected to this
+# url: "https://couchbaselabs.github.io" # If labs.couchbase.com is redirected to this
+# baseurl: "/CapellaDataStudioBuilds" # If your site is at .../CapellaDataStudioBuilds
+url: "http://labs.couchbase.com" # If labs.couchbase.com is redirected to this
 baseurl: "/CapellaDataStudioBuilds" # If your site is at .../CapellaDataStudioBuilds
 twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
 theme: minima
-# theme: just-the-docs
+#theme: just-the-docs
 plugins:
   - jekyll-feed
 
