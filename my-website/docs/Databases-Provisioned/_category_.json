@@ -1,0 +1,8 @@
+{
+  "label": "Databases Provisioned",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "This section is common to both Self Managed Couchbase Databases and Capella Provisioned Databases."
+  }
+}

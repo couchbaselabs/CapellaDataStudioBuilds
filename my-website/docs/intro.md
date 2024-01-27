@@ -1,47 +1,47 @@
 ---
 sidebar_position: 1
+title: "Introduction"
 ---
 
-# Tutorial Intro
+# Welcome to Capella DataStudio
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Unleash the Power of Data Management on Your Mac with Capella DataStudio – A New Frontier in Data Handling. **Capella DataStudio** is not just an application; it's a revolution in data management for Mac users. Whether you're an individual developer or part of a team, this tool is your gateway to efficient, intuitive, and powerful data handling.
 
-## Getting Started
+## Why Choose Capella DataStudio?
 
-Get started by **creating a new site**.
+:::tip[Single Pane of Glass]
+Seamlessly manage data across **Couchbase Self-managed**, **Capella Provisioned**, and **Capella Columnar** instances
+:::
+:::tip[Datasets]
+Access Couchbase's curated datasets from the **Public Cloud**, or develop your own Datasets and host it on your **Private S3 Bucket** or privately in your laptop, or **Import** your downloaded (_csv/tsv/json_) file, _without size limitation_.
+:::
+:::tip[Backup Center]
+Backup and Restore _across_ **Couchbase Self Managed** and **Capella Provisioned** platforms.<br />
+Effortlessly **migrate** from on-prem to cloud, or vice-versa
+:::
+:::tip[Innovative UI Design]
+Dive into an **intuitive interface** to view databases, scopes, collections, documents, and indexes.<br />
+Visualize all your scope schemas in one place with our groundbreaking **schema viewer**.<br />
+Enjoy a super fun user experience with a Dark Mode interface, keeping your _operational context always visible_.
+:::
+:::tip[Enhanced Query Workbench]
+Dive into an **intuitive interface** to view databases, scopes, collections, documents, and indexes.<br />
+Experience the enriched Query Workbench, now equipped with a _side panel_ for sample documents, indexes, favorites, and schemas to ease your SQL++ development. Comes with integrated charts too.<br />
+Organize your **query favorites** efficiently with display titles and descriptions.<br />
+Benefit from **Capella iQ**'s AI assistance for rapid SQL++ query development<br />
+:::
+_And much, much more ....._
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+## Your Influence, Our Direction
 
-### What you'll need
+- **Beta Experience**: As a beta product, **Capella DataStudio** is an experimental tool designed to gauge customer interest. While not officially supported by Couchbase, it represents the cutting edge of data tool development.<br />
+- **Feedback-Driven Features**: This is your opportunity to shape the product's future. Features are primarily customer-driven, making your feedback invaluable.<br />
+- **Expect the Unexpected**: With rapid development, expect some bugs. We advise not using this for production purposes yet.<br />
+- **Mac Exclusive**: Currently available exclusively for Mac, **Capella DataStudio** is Apple certified and auto-updates for your convenience.<br />
+- **Built on Proven Technology**: Harnessing the same technology that powers renowned applications like VSCode, Slack, WhatsApp, Discord, and Figma, **Capella DataStudio** stands on the shoulders of giants.
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+## Join Us in This Exciting Journey
 
-## Generate a new site
+Capella DataStudio is more than just an application; it's a community of forward-thinking developers shaping the future of data management. Be a part of this journey and help us create a tool that resonates with your needs and aspirations.
 
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+_Embrace the future of data management with Capella DataStudio – where innovation meets practicality._

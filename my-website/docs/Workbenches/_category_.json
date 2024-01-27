@@ -1,0 +1,8 @@
+{
+  "label": "Workbenches",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "description": "This section is common to Self Managed Couchbase Databases, Capella Provisioned and Capella Columnar Databases."
+  }
+}
