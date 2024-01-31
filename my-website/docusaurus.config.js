@@ -97,12 +97,8 @@ const config = {
                 href: "https://www.couchbase.com/forums/",
               },
               {
-                label: "Linkedin",
-                href: "https://www.linkedin.com/company/couchbase/",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/couchbase",
+                label: "Discord",
+                href: "https://bit.ly/3JGCeUg",
               },
             ],
           },

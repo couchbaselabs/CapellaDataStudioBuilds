@@ -6,12 +6,27 @@ sidebar_position: 2
 
 ## Install Capella DataStudio
 
-- Downoad the product from the home page
-- Unzip the downloaded zip file
-- Move or Copy the **Capella DataStudio** application to ~/Applications folder. Just the Application alone, not the entire folder!
-- Execute Capella DataStudio from here
-  :::info[Take care]
-  If you attempt to run it from the downloaded folder, it will pop up a error message saying: _Update Error_
+Downoad the product from the home page<br />
+Unzip the downloaded zip file<br />
+Move or Copy the **Capella DataStudio** application to ~/Applications folder. Just the Application alone, not the entire folder!<br />
+Execute Capella DataStudio from here
+:::info[Take care]
+If you attempt to run it from the downloaded folder, it will pop up a error message:
+<img src="/img/start/update-error.png" width="200" alt="update-error" />
+:::
+The first time you open, it may pop up a box:
+<img src="/img/start/open-warning.png" width="200" alt="open-warning" />
+
+- This is a normal warning for Mac Apps not downloaded from the MacStore
+
+On opening the Application from ~/Applications, you will see:
+<img src="/img/start/first-open.png" width="600" alt="first-open" />
+If you see this, then the Product is successfully installed
+
+:::tip
+
+- For the best experience, maximize the App
+- App auto-updates
   :::
 
 ## Supported Couchbase Editions and Versions
@@ -22,9 +37,7 @@ sidebar_position: 2
 
 :::danger[Disclaimers]
 
-- Capella DataStudio is still an experimental project
-  - This means that features are being rapidly added redesigned, and so the initial period may have breaking changes.
 - Capella DataStudio is **not** an officially supported product of Couchbase
-- This is in active development with frequent updates. While decent amount of testing is done, please expect bugs!
-- Depending on users interest, this may be formally "productized" ... no decisions yet.
+- It's **community** supported
+- This is still in **beta**. _Not recommended for Production systems_.
   :::
