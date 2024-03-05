@@ -1,13 +1,16 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 title: "Results Panel"
 ---
 
 # Results Panel
 
-Lets discuss this in detail
-![workbench-results-json](/img/workbenches/workbench-results-json.png)
-This has a _ToolBar_ and the _Results Display_
+Lets discuss this in detail<br />
+As a first example, let's execute this query:
+
+```sql
+select * from airport limit 120;
+```
 
 ## Toolbar Status
 
@@ -20,35 +23,65 @@ This is the status of the query run.
 ## Toolbar Buttons
 
 **Export Button**: Exports the results either in _json_ or _csv_ depending on whether the current view is _json_ or _table_
+**Views Toggle Buttons**: These are the different views:
 
-- The file is always written to ~/Downloads/capds-result.\* (json or csv)
-- Here is an example of the csv file for the example query shown:
+- **JSON**
+- **Table**
+- **Chart**
+- **Plan**
+- **Index Advisor**
 
-```csv
-City, LandmarkCount
-San Francisco, 797
-London, 443
-Los Angeles, 284
-San Diego, 197
-Paris, 173
-Edinburgh, 141
-Birmingham, 101
-Sonoma, 80
-Liverpool, 67
-Glasgow, 64
+## JSON View
+
+![workbench-results-json](/img/workbenches/workbench-results-json.png)
+
+## Table View
+
+![workbench-results-table](/img/workbenches/workbench-results-table.png)
+
+**Note**: Table is horizontally scrollable<br />
+When you hover on the column header, the **sort** arrow and a **kebab menu** are shown<br />
+
+### Table Filters
+
+![workbench-table-filter](/img/workbenches/workbench-table-filter.png)
+
+#### Filter Example: Columns
+
+<img src="/img/workbenches/workbench-table-filter-column.png" width="200" alt="workbench-table-filter-column" />
+
+#### Filter Example: Name
+
+Let's filter on **airportname**
+![workbench-table-filter-post](/img/workbenches/workbench-table-filter-post.png)
+
+:::info
+For the remaining Views, we will use the Query:
+
+```sql
+SELECT city City, COUNT(DISTINCT name) LandmarkCount
+   FROM landmark
+   GROUP BY city
+   ORDER BY LandmarkCount
+   DESC LIMIT 10;
 ```
 
-**Views**: These are the different views:
+:::
 
-- JSON View (First Pic shows this)
-- Table View
-  ![workbench-results-table](/img/workbenches/workbench-results-table.png)
-- Chart View: You select from **Bar**,**Pie** or **Line** charts
-  ![workbench-results-chart](/img/workbenches/workbench-results-chart.png)
-- Plan View: This is the query Plan
-  ![workbench-results-plan](/img/workbenches/workbench-results-plan.png)
-  Index Advisor:
-  ![workbench-results-advisor](/img/workbenches/workbench-results-advisor.png)
+## Chart View
+
+You can select from **Bar**,**Pie** or **Line** charts
+![workbench-results-chart](/img/workbenches/workbench-results-chart.png)
+
+## Plan View
+
+This is the query Plan
+![workbench-results-plan](/img/workbenches/workbench-results-plan.png)
+
+## Index Advisor View
+
+![workbench-results-advisor](/img/workbenches/workbench-results-advisor.png)
+
 - The Index Advisor is available automatically
 - Notice the **Badge** on Icon.
   - This will pop up if there are any recommendations

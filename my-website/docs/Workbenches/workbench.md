@@ -7,10 +7,10 @@ title: "Workbenches Overview"
 
 AI assisted Query Workbenches to develop your SQL++ queries.
 :::info
-The Worbench is common to all types of connections with these exceptions:
+The Worbench is common to all types of connections:
 
-- AI Assist is not available for _Couchbase Self Managed Clusters_
-- Query Configuration is not applicable for _Capella Columnar_
+- AI Assist needs a _Capella Login_
+- Not all Query Configuration parameters are not applicable for _Capella Columnar_
   :::
 
 ## The Workbench UI
@@ -32,8 +32,8 @@ As a reminder, the structure of the Store (for Favorites) is:<br />
 ├── Favorites
 │   ├── travel-sample
 │   │   ├── inventory
-│   │   │	├── 1.sql
-│   │   │	├── 2.sql
+│   │   │	├── Example-of-Inner-Join##1.sql
+│   │   │	├── Example-of-Group-by-and-Order-by##2.sql
 ```
 
 :::

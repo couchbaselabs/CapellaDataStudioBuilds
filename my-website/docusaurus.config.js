@@ -69,7 +69,11 @@ const config = {
             position: "left",
             label: "Documentation",
           },
-
+          {
+            href: "https://www.couchbase.com/community-license-agreement04272021/",
+            position: "left",
+            label: "License",
+          },
           {
             href: "https://github.com/couchbaselabs/CapellaDataStudioBuilds",
             label: "GitHub",

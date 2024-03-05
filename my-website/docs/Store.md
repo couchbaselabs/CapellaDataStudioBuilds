@@ -33,7 +33,10 @@ Lets setup a couple of stores, one _Local_ and the other in the Cloud.
 #### Fill out the form
 
   <img src="/img/stores/stores-local-form.png" width="400" alt="stores-local-form" />
-After Adding, the UI will show your store
+
+- Click the **Select** button
+- Choose folder for your store
+
 ![Stores-Main](/img/stores/stores-local.png)
 
 - When you select the store in from the table (click _Radio Button_), notice the _Active Store_ name is displayed in the **AppBar**
@@ -61,10 +64,17 @@ After Adding, the UI will show your store
 
 - When you select the store in from the table (click _Radio Button_), notice the _Active Store_ name is displayed in the **AppBar**
 
+:::info[Encryption]
+
+- All **passwords** and **secrets** are encrypted using the native OS encryption. On Mac, this is Keychain. Keychain uses **AES-256** for encryption, the strongest encryption method.
+- The encrypted passwords are not actually stored in Keychain. They are still stored in Capella DataStudio Local Store. Keychain is used only to provide encryption and decryption services.
+  :::
+
 ## Tip
 
 :::tip[Tip]
 
+- You can add as many Local or Cloud Stores as you desire.
 - Set the **Active Store** Context from this UI.
 - Deleting the store from the UI, deletes only the **reference** to this store from the _Capella DataStudio store_ and not from the file system
 - If you delete accidentally from the UI, you can re-add the same store.
