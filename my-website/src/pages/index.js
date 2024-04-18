@@ -20,10 +20,19 @@ function HomepageHeader() {
           <a
             className="button button--secondary button--lg"
             href="https://github.com/couchbaselabs/CapellaDataStudioBuilds/releases/latest/download/Capella-DataStudio-darwin-x64.zip"
-            target="_blank" // Opens in a new tab
-            rel="noopener noreferrer" // Security for opening links in a new tab
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Download for MacOS - It's Free!
+          </a>
+          <a
+            className="button button--secondary button--lg"
+            href="https://github.com/couchbaselabs/CapellaDataStudioBuilds/releases/latest/download/Capella.DataStudio-1.1.8-beta.Setup.exe"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ marginLeft: "10px" }}
+          >
+            Download for Windows - It's Free!
           </a>
         </div>
       </div>
