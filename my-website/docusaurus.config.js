@@ -10,7 +10,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 const config = {
   title: "Capella DataStudio",
   tagline:
-    "A cool data management tool with a single pane of glass UI for your Self-Managed, Capella and Columnar databases",
+    "A Community Supported, free, cool data management tool with a single pane of glass UI for your Self-Managed, Capella and Columnar databases",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -94,7 +94,7 @@ const config = {
             ],
           },
           {
-            title: "Community",
+            title: "Community Support",
             items: [
               {
                 label: "Couchbase Forums",

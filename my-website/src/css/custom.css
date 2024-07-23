@@ -30,7 +30,7 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-.alert--success {
+/* .alert--success {
   --ifm-alert-background-color: #fff0db;
   --ifm-alert-border-color: #fc9c0c;
   color: black;
@@ -44,4 +44,4 @@
   --ifm-alert-background-color: #fff0db;
   --ifm-alert-border-color: #fc9c0c;
   color: black;
-}
+} */

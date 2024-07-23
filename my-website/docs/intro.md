@@ -34,10 +34,10 @@ _And much, much more ....._
 
 ## Your Influence, Our Direction
 
-- **Beta Experience**: As a beta product, **Capella DataStudio** is a tool designed to gauge customer interest. While not officially supported by Couchbase (Community Supported), it represents the cutting edge of data tool development.<br />
+- **Community Experience**: As a community supported product, **Capella DataStudio** is a tool designed to respond to the community for f. While not officially supported by Couchbase (Community Supported), it represents the cutting edge of data tool development.<br />
 - **Feedback-Driven Features**: This is your opportunity to shape the product's future. Features are primarily customer-driven, making your feedback invaluable.<br />
 - **Expect the Unexpected**: With rapid development, expect some bugs. We advise not using this for production purposes yet.<br />
-- **Mac Exclusive**: Currently available exclusively for Mac, **Capella DataStudio** is Apple signed and certified and auto-updates for your convenience.<br />
+- **Mac and Windows**: Available for both Mac and Windows, **Capella DataStudio** is Apple signed and certified and auto-updates for your convenience.<br />
 - **Built on Proven Technology**: Harnessing the same technology that powers renowned applications like VSCode, Slack, WhatsApp, Discord, and Figma.
 
 ## Join Us in This Exciting Journey

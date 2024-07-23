@@ -27,7 +27,7 @@ function HomepageHeader() {
           </a>
           <a
             className="button button--secondary button--lg"
-            href="https://github.com/couchbaselabs/CapellaDataStudioBuilds/releases/latest/download/Capella.DataStudio-1.1.8-beta.Setup.exe"
+            href="https://github.com/couchbaselabs/CapellaDataStudioBuilds/releases/latest/download/Capella.DataStudio-1.2.5.Setup.exe"
             target="_blank"
             rel="noopener noreferrer"
             style={{ marginLeft: "10px" }}
