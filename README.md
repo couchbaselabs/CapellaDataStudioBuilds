@@ -1,12 +1,11 @@
 # Welcome to Capella DataStudio
 
 ## Disclaimers
-- Capella DataStudio is an experimental project
-- Capella DataStudio is not supported by Couchbase
+- Capella DataStudio is only Forum supported.
+- This product is Couchbase CE licensed: https://www.couchbase.com/community-license-agreement04272021/
 - This is in active development with frequent updates. While decent amount of testing is done, please expect bugs!
-- Depending on users interest, this may be formally "productized" ... no decisions yet.
 ## Install Capella DataStudio
-- Go to latest Release
+- Go to latest Release: https://capelladatastudio.com/
 - Download the zip file for your Operating System
 - Unzip the downloaded zip file
 - Move or Copy the Capella DataStudio application to ~/Applications folder
@@ -18,6 +17,7 @@
 - Couchbase Capella
 - Couchbase Columnar
 ## Quick Guide
+- Full Documentation: https://capelladatastudio.com/docs/intro
 ### Navigation
 The UI has 3 parts and this document will refer to these sections:
 - The AppBar: This is the Top Bar which has the Capella DataStudio Logo
