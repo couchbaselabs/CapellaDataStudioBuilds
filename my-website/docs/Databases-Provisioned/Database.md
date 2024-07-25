@@ -3,117 +3,80 @@ sidebar_position: 1
 title: "The Database UI"
 ---
 
-# Databases
+# Databases (_Buckets_)
 
 :::info
-As an example, we will be looking at databases from a Provisoned Connection, _Acme Shopping Cluster_. The documentation for Database Provisioned also apply to Self managed instances.
+As an example, we will be looking at databases from a Provisioned Connection, _Acme Shopping Cluster_. The documentation for Database Provisioned also apply to Self managed instances.
 :::
-
-## The UI
 
 ![Provisioned-Database-Main](/img/databases/databases-capella-main.png)
-The UI is tabbed:
 
-- Databases (aka _Buckets_)
-- Documents
-- GSI Indexes
-- Schema
-- FTS Indexes (_under construction_)
+## Databases UI
 
-## Databases (_Buckets_)
+The Databases UI in Capella DataStudio provides a comprehensive interface for managing databases, scopes, and collections. This feature is designed to facilitate efficient data management and synchronization between Capella DataStudio and your Couchbase Server.
 
-The Main Panel has 3 tables
+### Features
 
-- **Bucket**: Choosing Bucket sets _Active Bucket_ in the **AppBar**
-- **Scope**: Scopes for the chosen Bucket. Choosing Scope sets _Active Scope_ in the **AppBar**
-- **Collection**: Collections for the chosen Scope.
+#### Top Panel
 
-## Buckets Table
+- **Server Sync Button**: Use this button to sync Capella DataStudio with the server if you have added databases outside of Capella DataStudio. This synchronization will not affect any stored documents and schemas.
 
-This table shows the list of buckets and the number of documents in each bucket.<br />
-The table also has a Refresh Button and a Backup Button.<br />
-**Refresh**: This action results in the following:
+#### Three Main Panels
 
-- The bucket is removed from the _CapellaDatastudio store_
-- The bucket information is fetched once again from the Server
-- You need to do this if Scopes and Collections have been added/removed directly from the Server UI and are not reflected in Capella DataStudio.
-  **Backup**: This backs up the entire bucket. More on this later in this page.
+##### Databases Panel
 
-:::warning
-You _cannot_ create Buckets from Capella DataStudio.<br />
-You _cannot_ delete Buckets from Capella DataStudio.<br />
-:::
-
-## Scopes Table
-
-This table shows the list of scopes in the chosen bucket.<br />
-The table also has a Add Scope, Refresh and Delete Buttons.
-:::info
-When you connect to a new instance, or create scopes and add data etc. schemas are **not** automatically fetched.<br />
-You need to refresh Scopes to fetch the schemas and a sample document.<br />
-Refresh will perform the action on **all scopes** and their associated collections.<br />
-
-- So, This action takes time!!!
-  - You can check if the collections have a schema from the adjoining table.
-- A red check box means, no schema for this collection
-  - This will be true if that collection has no documents
-- A green check box means there is a schema for this collection
-- Schemas are available only for clusters with **Query Service**
+- **Databases List**: Displays the names and number of documents in each database. Selecting a database sets it as the active database.
+- **AppBar**: Check out the AppBar for additional options.
+- **Backup Button**: Located in the panel toolbar, this button will be discussed later.
+  :::warning
+  You _cannot_ **create** or **delete** Buckets from Capella DataStudio.
   :::
 
-**+Scope**: This action adds one or more Scopes to the Bucket.
-<img src="/img/databases/databases-capella-main-add-scope.png" width="400" alt="Capella Add Scope" />
+##### Scopes Panel
 
-**+Refresh**: This action results in the following:
+- **Scopes List**: Lists the scopes for the active database, indicating whether they are read and write enabled.
+- **Add Scope Button**: Located in the panel toolbar, this button brings up a dialog box to add a new scope.
+- **Delete Scope Button**: A trashcan icon in the panel toolbar allows you to delete a scope. Selecting a scope sets it as the active scope.
 
-- The scope is removed from the _CapellaDatastudio store_.
-- The scope information is fetched once again from the Server.
-- Most importantly, it fetches the **schema** for the collection.
+##### Collections Panel
 
-**Delete** (Trashcan Icon):
+- **Collections List**: Displays the collections for the active scope, showing collection name, number of items, memory used, disk utilized, TTL, and a schema status column with a red or green checkmark
+  :::info
+  In the Collections Table, currently, the Ops/Sec, Mem Used, Disk Utiized are fetched only once and are not continuously refreshed.
+  :::
 
+- **Create Collection Button**: Located in the panel toolbar, this button brings up a dialog box to create a new collection.
+- **Get Schemas Button**: Located in the panel toolbar, clicking this button retrieves schemas for all collections in the active scope and updates the schema status. It also fetches a sample document for each collection, which is helpful for developers building queries.
+  :::info
+
+  - A red check mark means, no schema and no sample document for this collection
+  - A green check mark means there is a schema and sample document for this collection
+  - Schemas are available only for clusters with **Query Service**
+    :::
+
+- **Delete Collection Button**: A trashcan icon in the panel toolbar allows you to delete a collection.
+
+### Dialog Boxes
+
+- **Add Scope Dialog**: This dialog box is displayed when adding a new scope.
+  <img src="/img/databases/databases-capella-main-add-scope.png" width="400" alt="Capella Add Scope" />
+- **Delete Scope Dialog**: This dialog box is displayed when deleting a scope.
   <img src="/img/databases/databases-capella-main-delete-scope.png" width="400" alt="Capella Delete Scope" />
-
-This action results in the following:
-
-- All collections in the scope are deleted from the server
-- The scope is deleted from the server
-- This action is irreversible
-
-## Collections Table
-
-This table shows the list of collections in the chosen scope.<br />
-The table also has a Add Collection, Refresh and Delete Buttons.<br />
-**+Collection**: This action adds one or more Collections to the Scope.
-
+- **Add Collection Dialog**: This dialog box is displayed when adding a new collection.
   <img src="/img/databases/databases-capella-main-add-collection.png" width="400" alt="Capella Add Collection" />
+- **Delete Collection Dialog**: This dialog box is displayed when deleting a collection.
+  <img src="/img/databases/databases-capella-main-delete-collection.png" width="400" alt="Capella Delete Collection" />
 
-**+Refresh**: This action results in the following:
+### Footer
 
-- The latest item count is fetched from the server.
-  **Delete** (Trashcan Icon): You can delete one or more collections by choosing them. The checkbox indicates the collections chosen.
+- **Status Bar**: Displays information from background jobs such as import, backup, and restore.
+- **Footer Table**: Shows configuration, settings, and performance metrics of the active database, including Resident Ratio % and Cache Hit %, which are particularly useful for understanding database performance.
+  :::info
+  In the Footer Table, currently, the Performance metrics are fetched only once and are not continuously refreshed.
+  :::
 
-<img src="/img/databases/databases-capella-main-delete-collection.png" width="400" alt="Capella Delete Collection" />
-
-This action results in the following:
-
-- All collections in the scope are deleted from the server
-- This action is irreversible
-
-:::info
-In the Collections Table, currently, the Ops/Sec, Mem Used, Disk Utiized are fetched only once and are not continuously refreshed.
-:::
-
-## The Footer Table
-
-Displays some details on the chosen Bucket.
-:::info
-In the Footer Table, currently, the Performance metrics are fetched only once and are not continuously refreshed.
-:::
-
-## Tip
+The Databases UI is a powerful tool in Capella DataStudio that provides a structured and efficient way to manage your databases, scopes, and collections. With its intuitive interface and comprehensive features, you can ensure optimal performance and synchronization of your data.
 
 :::tip[Tip]
-
 Set the **Active Bucket** and **Active Scope** Context from this UI.
 :::

@@ -6,6 +6,7 @@ title: "Add Database and Scope"
 # Add Database and Scope
 
 These are actually a pretty straight forward process.
+![database-actions](/img/columnar/database-actions.png)
 
 ### Create a Database
 

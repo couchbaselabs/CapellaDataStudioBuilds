@@ -14,28 +14,42 @@ The **GSI Indexes** Tab allows you to select any Collection and view the Indexes
 :::
 ![indexes-provisoned](/img/databases/provisioned-indexes.png)
 
-## The Indexes UI Main Panel
+## GSI Indexes UI
 
-Let's look at the displayed Index definition:
+The GSI Indexes UI in Capella DataStudio provides a comprehensive overview of all Global Secondary Indexes (GSI) for the active database and scope. This feature is designed to enhance index management and improve the efficiency of your Couchbase Server.
 
-```sql
-create INDEX `def_inventory_route_route_src_dst_day`
-ON `travel-sample`.`inventory`.`route`
-(`sourceairport`,`destinationairport`,(distinct (array (`v`.`day`) for `v` in `schedule` end)))
-```
+### Features
 
-- Clicking on any Collection shows the Indexes on this Collection on the right table.
-- The details include:
-  - The _Index Name_
-  - The _Keys_ which are being indexed
-  - The _Filter_: This would typically be the _where_ clause in a _partial_ index
+- **Table View**: All GSI indexes are displayed in a sortable and filterable table.
+  - **Collection Name**: The name of the collection.
+  - **Keys**: The indexed fields.
+  - **Filter**: The where clause (partial index).
+  - **Status**: The current status of the index.
+  - **Replicas**: The number of index replicas.
+  - **Partitions**: The number of partitions.
+  - **Build Progress**: The progress of index building.
+  - **Date Last Used**: The last date the index was used.
 
-## The Indexes UI Footer
+### Functionality
 
-If the indexes have replicas (by default in Capella Provisioned), then, details of the Index on the _nodes_ which the indexes are deployed.
+- **Sortable and Filterable**: The table allows you to sort and filter individual columns, making it easier to search for duplicates and assess whether an index is being used. This functionality aids in consolidating indexes and removing unwanted ones to improve server efficiency.
+- **Index Management**: Easily manage your indexes by sorting and filtering columns. This helps in identifying unused or duplicate indexes, allowing for consolidation and removal to enhance server performance.
 
-## Tip
+### Footer Metrics
+
+The footer of the table provides important metrics about the indexes, including:
+
+- **Scan Latency**: The time taken to scan the index.
+- **Resident Ratio**: The percentage of index data that resides in memory.
+- **Cache Hit Ratio**: The ratio of index cache hits to total requests.
+- **Index Fragmentation %**: The percentage of index fragmentation, useful for assessing index performance.
+
+### Index Operations
+
+- **Drop Indexes**: Indexes can be dropped directly from this view, providing a convenient way to manage and optimize your indexes.
+
+The GSI Indexes UI is a powerful tool in Capella DataStudio for managing your indexes efficiently. With its detailed view and comprehensive metrics, you can ensure your Couchbase Server runs optimally by effectively managing and optimizing your indexes.
 
 :::tip[Tip]
-Indexes are also displyed in the **Workbenches** UI, and there, te indexes are displayed in the definito format.
+Indexes are also displayed in the **Workbenches** UI, and there, the indexes are displayed in the definiton format.
 :::
