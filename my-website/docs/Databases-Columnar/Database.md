@@ -3,109 +3,72 @@ sidebar_position: 1
 title: "The Database UI"
 ---
 
-# Databases
+# Database
 
-:::info
-As an example, we will be looking at databases from a Columnar Connection, _Acme Columnar_.
-:::
+![Provisioned-Database-Main](/img/columnar/database-initial.png)
 
-## The Columnar Database UI
+## Databases UI
 
-![database-initial](/img/columnar/database-initial.png)
-The UI is tabbed:
+The Databases UI in Capella DataStudio provides a comprehensive interface for managing databases, scopes, and collections. This feature is designed to facilitate efficient data management and synchronization between Capella DataStudio and your Couchbase Server.
 
-- Databases
-- Documents
-- Indexes
-- Schema
-- Views (under construction)
+### Features
 
-## Databases
+#### Top Panel
 
-The Main Panel has 4 tables
+- **Server Sync Button**: Use this button to sync Capella DataStudio with the server if you have added artifacts outside of Capella DataStudio. This synchronization will not affect any stored documents and schemas.
 
-- **Bucket**: Choosing Bucket sets _Active Bucket_ in the **AppBar**
-- **Scope**: Scopes for the chosen Bucket. Choosing Scope sets _Active Scope_ in the **AppBar**
-- **Links**: This is the _Data Source_ for the Collections.
-- **Collection**: Collections for the chosen Scope, from the _Link_
+#### Four Main Panels
 
-## Database Table
+##### Databases Panel
 
-This table shows the list of databases.<br />
-The table also has a Add Database, Refresh Button and a Delete Button.<br />
-**+Database**: This action adds a empty Database.<br />
-**Refresh**: This action results in the following:
+- **Databases List**: Displays the names and number of documents in each database. Selecting a database sets it as the active database.
+- **AppBar**: Check out the AppBar for additional options.
+- **Add Database Button**: Located in the panel toolbar, this button will be discussed later.
 
-- The database information is removed from the _CapellaDatastudio store_
-- The database information is fetched once again from the Server
-- You need to do this if Scopes/Links/Collections have been added/removed directly from the Server UI and are not reflected in Capella DataStudio.
+##### Scopes Panel
 
-**Delete**: Deletes the database from the Server
+- **Scopes List**: Lists the scopes for the active database, indicating whether they are read and write enabled.
+- **Add Scope Button**: Located in the panel toolbar, this button brings up a dialog box to add a new scope.
+- **Delete Scope Button**: A trashcan icon in the panel toolbar allows you to delete a scope. Selecting a scope sets it as the active scope.
 
-- This action is irreversible
+##### Links Panel
 
-## Scopes Table
-
-This table shows the list of scopes in the chosen database.<br />
-The table also has a Add Scope, Refresh and Delete Buttons.<br />
-**+Scope**: This action adds one or more Scopes to the Bucket.<br />
-**+Refresh**: This action results in the following:
-
-- The scope is removed from the _CapellaDatastudio store_.
-- The scope information is fetched once again from the Server.
-
-**Delete** (Trashcan Icon):
-This action results in the following:
-
-- The Scope is deleted fromm the Server
-- This action is irreversible
-
-## Links Table
-
-This table shows the list of Links (_Data Source_) in the chosen scope.<br />
-The table also has a Add Link, Refresh and Delete Buttons.<br />
-
-**+Link**: This action adds a Link to the Scope.<br />
-**+Refresh**: This action results in the following:
-
-- The _Schema_ and the _Item Count_ fetched from the Selected Link (_Data Source_)
+- **Add Link Reference Button**: This adds a Reference to a Link to enable creation of Collections in the Link. The Reference can be selected from the list of Global Links for the cluster and these are managed by Links Manager.
+- **Manage Links**: Located in the panel toolbar, this button brings up a dialog box to managae Links.
   :::info
-  This is a expensive operation which takes time, especially fetching the item count from _S3 Buckets_<br />
-  This is the reason refresh is applicable to the Selected Link.<br />
+  Links Manager and Links Reference will be discussed in the next page.
   :::
 
-**Delete** (Trashcan Icon):
-This action results in the following:
+##### Collections Panel
 
-- The Link is deleted fromm the Server
-- This action is irreversible
-
-## Collections Table
-
-This table shows the list of collections in the chosen scope.<br />
-The table also has a Add Collection, Refresh and Delete Buttons.<br />
-**+Collection**: This action adds one or more Collections to the Scope for the chosen Link.<br />
-**+Refresh**: This action results in the following:
-
-- The _Schema_ and the _Item Count_ fetched from the Selected Link (_Data Source_)
+- **Collections List**: Displays the collections for the selected Link reference, showing collection name, number of items, and a schema status column with a red or green checkmark
+- **Create Collection Button**: Located in the panel toolbar, this button brings up a dialog box to create a new collection.
+- **Get Schemas Button**: Located in the panel toolbar, clicking this button retrieves schemas for all collections in the active scope and updates the schema status. It also fetches a sample document for each collection, which is helpful for developers building queries.
   :::info
-  This is a expensive operation which takes time, especially fetching the item count from _S3 Buckets_<br />
-  This is the reason refresh is applicable to the Selected Link.<br />
+
+  - A red check mark means, no schema and no sample document for this collection
+  - A green check mark means there is a schema and sample document for this collection
+    :::
+
+- **Delete Collection Button**: A trashcan icon in the panel toolbar allows you to delete a collection.
+
+### Dialog Boxes
+
+- **Add Database Dialog**: This dialog box is displayed when adding a new scope.
+  <img src="/img/columnar/database-add-form.png" width="400" alt="database-add-form" />
+- **Add Scope Dialog**: This dialog box is displayed when adding a new scope.
+  <img src="/img/columnar/scope-add-form.png" width="400" alt="scope-add-form.png" />
+- **Add Collection Dialog**: This dialog box is displayed when adding a new collection.
+  :::info
+  Add Collections will be discussed in detail in a subsequent section.
   :::
 
-**Delete** (Trashcan Icon):
-This action results in the following:
+### Footer
 
-- The Collection is deleted fromm the Server
-- This action is irreversible
+- **Footer Table**: Shows Collection details for the selected Link Reference.
 
-## The Footer Table
-
-Displays some Collection details on the chosen Scope.
-
-## Tip
+The Databases UI is a powerful tool in Capella DataStudio that provides a structured and efficient way to manage your databases, scopes, and collections. With its intuitive interface and comprehensive features, you can ensure optimal performance and synchronization of your data.
 
 :::tip[Tip]
-
 Set the **Active Bucket** and **Active Scope** Context from this UI.
 :::

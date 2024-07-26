@@ -1,67 +1,77 @@
 ---
-sidebar_position: 3
+sidebar_position: 5
 title: "Couchbase Link and Collections"
 ---
 
-# Add a Couchbase Link
+# Add a Couchbase Link Reference
 
-The _Database_ and _Scope_ have been selected.<br />
-Now, click the **+Link** button in the Liks Table ToolBar. This will bring up the list of choices:
-<img src="/img/columnar/link-add-initial.png" width="400" alt="link-add-initial" />
+The _Database_ and _Scope_ have been selected.
 
-Choose _Couchbase_: This brings up a form which allows you to choose the _Couchbase Connection_
-<img src="/img/columnar/link-add-couchbase.png" width="400" alt="link-add-couchbase" />
+### Step 1: Add Couchbase Link Reference
 
-In the example, the _Acme Shopping Cluster_ will be chosen.
+Click the **LinkRef** button in the Links Table ToolBar. This will bring up the list of choices:
+<img src="/img/columnar/link-add-couchbase-reference.png" width="400" alt="link-add-couchbase-reference" />
+After adding the Link Reference, you will see:
 
-- Note that _Link Name_ is automatically set as the Connection Name, the spaces replaced by hyphens.
+![link-add-couchbase-reference-after](/img/columnar/link-add-couchbase-reference-after.png)
 
-### Check
+- Click on the Link Reference
+- This will enable to Add Collection button
+- Note that the Link is not **connected**. Don't connect it yet.
 
-Let's take a look at the UI after creating the Link:
-![link-add-couchbase-after](/img/columnar/link-add-couchbase-after.png)
+### Step 2: Add Collection
 
-- We see the Link Source Icon and the name followes by a _Connect Switch_ which is set to _Off_
-
-:::info
-You need to _Connect_ to the Source to fetch the Data to the Collection
-:::
-We are not there yet. So, lets first add the Collections.
-
-## Add Collections
-
-Click the **+Collection** and you will get this form:
-<img src="/img/columnar/dataset-couchbase-form.png" width="400" alt="dataset-couchbase-form" />
+![dataset-couchbase-before-connect](/img/columnar/dataset-couchbase-form.png)
 
 - Choose the Database (Bucket) and Scope from the drop-down
 - Select the Collections from the Source Cluster
   - You can rename the Collection. You would want to do this if this Collection name is already taken up. Remember Columnar Colllection names should be unique for the Scope.
 - You can optionally add a **filter** to the collection
   - Example _\`type\`=\`hotel\`_. This will exclude all documents with this field type and value.
+- Remember that these are the buckets and scopes accessible by the Database credentials used when adding Couchbase Connection in the list of Connections
+- Once satisfied, **Proceed** with Adding Collections. You then see the Progress
+  ![dataset-couchbase-before-connect](/img/columnar/dataset-couchbase-form.png)
+- You can check the progress
 
-### Add Collections Progress
+  <img src="/img/columnar/dataset-couchbase-form-running.png" width="600" alt="dataset-couchbase-form-running" />
 
-On clicking save, you can observe the addition process. This takes time!
-<img src="/img/columnar/dataset-couchbase-form-running.png" width="400" alt="dataset-couchbase-form-running" />
+- This operation takes a little time
+- The info box shows you the DDL being run
+- Dataset and Collection is synonymous
 
-## Post Add Collection
+#### Post Add Collection
 
 Once Collections have been added, the UI now will show:
-![dataset-couchbase-before-connect](/img/columnar/dataset-couchbase-before-connect.png)
-The Collections have been added, now it time to **Connect** to the source to fetch the data into the Columnar Collection.
+![dataset-couchbase-travel](/img/columnar/dataset-couchbase-travel.png)
+
+- The Collections have been added
+- Data is still not fetched yet, the link is not connected!
+- Now it time to **Connect** to the source to fetch the data into the Columnar Collection.
+
+### Step 3: Connect the Link
 
 - Set the **Connect Switch** to **ON**
-- Click the **Refresh** button on the Links Table ToolBar.
+- This will fetch the documents into the collections
+  - Note that Items still do show the number of documents
+  - The Schema column still shows a red tick mark
 
-  :::info
+### Step 4: Get Schemas (optional, but nice)
 
-  The **Refresh** action does the following:
-
+- Click the **Get Schemas** button. It:
   - Fetches the **item count**
   - Fetches one **sample document** and attaches it to the Collection
   - Fetches the **schema** for that Collection and attaches it to the Collection<br />
+    :::info
     This is an expensive operation and need to be performed just once.
     :::
 
 The UI now shows:
 ![dataset-couchbase-full](/img/columnar/dataset-couchbase-full.png)
+
+## Example: Adding Collection with Filter
+
+![dataset-couchbase-beers](/img/columnar/dataset-couchbase-beers.png)
+
+- Example shows how to apply a Filter
+- Note that the Collection Name cannot begin with an _underscore_
+- After editing the Filter column, remember to press **Enter** button.
