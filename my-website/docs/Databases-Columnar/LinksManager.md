@@ -5,6 +5,8 @@ title: "Links Manager"
 
 # Links Manager
 
+The Links Manager is the Central Manager for all your Links in the Columnar Instance.
+
 The Links Manager is a crucial component of Capella DataStudio that allows you to manage connections to various data sources. This dialog provides a centralized interface for creating and managing links to different platforms.
 
 Unlike Couchbase Server, Columnar Collections come in 2 flavors

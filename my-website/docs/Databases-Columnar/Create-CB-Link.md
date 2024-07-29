@@ -3,9 +3,9 @@ sidebar_position: 5
 title: "Couchbase Link and Collections"
 ---
 
-# Add a Couchbase Link Reference
+# Couchbase Link and Collections
 
-The _Database_ and _Scope_ have been selected.
+Create a Collection linked to Capella Provisioned or Self Managed Couchbase.
 
 ### Step 1: Add Couchbase Link Reference
 

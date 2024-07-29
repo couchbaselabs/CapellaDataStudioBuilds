@@ -1,11 +1,11 @@
 ---
 sidebar_position: 12
-title: "Cleaning up"
+title: "Uninstall"
 ---
 
-# Cleaning up
+# Uninstall and Cleaning up
 
-You might want to clean up assets stored on your computer by the DataStudio in 2 circumstances
+You might want to uninstall and clean up assets stored on your computer by the DataStudio in 2 circumstances
 
 - You want to remove **Capella DataStudio** App from your computer ☹️
 - Something went wrong and the DataStudio is not starting up normally
