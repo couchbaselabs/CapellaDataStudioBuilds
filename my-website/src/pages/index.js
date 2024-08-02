@@ -19,7 +19,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <a
             className="button button--secondary button--lg"
-            href="https://github.com/couchbaselabs/CapellaDataStudioBuilds/releases/latest/download/Capella-DataStudio-darwin-x64.zip"
+            href="https://github.com/couchbaselabs/CapellaDataStudioBuilds/releases/latest/download/Capella.DataStudio.zip"
             target="_blank"
             rel="noopener noreferrer"
           >

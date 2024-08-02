@@ -11,17 +11,18 @@ Downoad the product from the home page<br />
 ### MacOS
 
 - Unzip the downloaded zip file
-- Move or Copy the Capella DataStudio application to ~/Applications folder. Just the Application alone, not the entire folder!
+- Move or Copy the Capella DataStudio application to ~/Applications folder.
 - Execute Capella DataStudio from here
 
 :::info[Take care]
-If you attempt to run it from the downloaded folder, it will pop up a error message:
+If you attempt to run it from the downloaded folder, it may pop up a error message:
 <img src="/img/start/update-error.png" width="200" alt="update-error" />
 :::
 
 The first time you open, it may pop up a box:
 <img src="/img/start/open-warning.png" width="200" alt="open-warning" />
 This is a normal warning for Mac Apps not downloaded from the MacStore
+You may also see a pop up om Mac asking for permission to access **keychain**. Please click on **Allow Always**. Capella DataStudio uses Mac Keychain to encrypt password. This is important.
 
 On opening the Application from ~/Applications, you will see:
 <img src="/img/start/first-open.png" width="600" alt="first-open" />
