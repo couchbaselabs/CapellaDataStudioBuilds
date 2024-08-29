@@ -1,3 +1,4 @@
+import React from "react";
 import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
@@ -6,6 +7,8 @@ import HomepageFeatures from "@site/src/components/HomepageFeatures";
 
 import Heading from "@theme/Heading";
 import styles from "./index.module.css";
+import macIcon from "@site/static/img/apple-logo.png";
+import WindowsIcon from "@site/static/img/windows-logo.png";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -23,17 +26,36 @@ function HomepageHeader() {
 "
             target="_blank"
             rel="noopener noreferrer"
+            style={{ display: "flex", alignItems: "center" }}
           >
-            Download for MacOS - It's Free!
+            <img
+              src={macIcon}
+              alt="Mac Icon"
+              style={{
+                width: "20px",
+                height: "24px",
+                marginRight: "10px",
+              }}
+            />
+            Download for MacOS
           </a>
           <a
             className="button button--secondary button--lg"
             href="https://github.com/couchbaselabs/CapellaDataStudioBuilds/releases/latest/download/Capella.DataStudio.Setup.exe"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ marginLeft: "10px" }}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              marginLeft: "10px",
+            }}
           >
-            Download for Windows - It's Free!
+            <img
+              src={WindowsIcon}
+              alt="Windows Icon"
+              style={{ width: "24px", height: "24px", marginRight: "10px" }}
+            />
+            Download for Windows
           </a>
         </div>
       </div>

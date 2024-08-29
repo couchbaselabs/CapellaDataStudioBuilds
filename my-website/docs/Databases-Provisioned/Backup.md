@@ -1,6 +1,6 @@
 ---
 sidebar_position: 6
-title: "Backing up a Database"
+title: "Backing up a Bucket"
 ---
 
 # Backup
@@ -16,9 +16,9 @@ title: "Backing up a Database"
 
 :::
 
-## Backup the database
+## Backup the bucket
 
-### Select the database and click the backup icon
+### Select the bucket and click the backup icon
 
 ![backup-select](/img/backup/backup-select.png)
 
@@ -48,7 +48,7 @@ The logs show the typical output of **cbbackupmanager**
 ![backup-notification](/img/backup/backup-check-center.png)
 
 - **Backup Center** is discussed in detail elsewhere in the documentation
-- For now, click on the database backed up and choose the time.
+- For now, click on the bucket backed up and choose the time.
   - This shows details of the backup available
 
 ## Tip

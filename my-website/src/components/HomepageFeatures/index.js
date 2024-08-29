@@ -3,34 +3,35 @@ import Heading from "@theme/Heading";
 import styles from "./styles.module.css";
 import CouchbaseSelfSVG from "@site/static/img/couchbase.svg";
 import CouchbaseCapellaSVG from "@site/static/img/capella.svg";
+import CouchbaseColumnarSVG from "@site/static/img/columnar.svg";
 
 const FeatureList = [
   {
-    title: "Couchbase Self-Managed",
+    title: "Couchbase Server",
     Svg: CouchbaseSelfSVG,
     description: (
       <>
-        Connect to your Self-Managed Couchbase instances. These can be On-prem,
-        deployed on any Cloud provider or a Docker instance on your Mac.
+        Connect to your Couchbase Server Clusters. These can be On-prem,
+        deployed on any Cloud provider or Docker.
       </>
     ),
   },
   {
-    title: "Couchbase Capella",
+    title: "Capella Operational",
     Svg: CouchbaseCapellaSVG,
     description: (
       <>
-        Connect to your Capella instances. Use the cool AI assisted iQ to
-        generate your SQL++ queries.
+        Connect to your Capella Operational Clusters. Use the cool AI assisted
+        iQ to generate your SQL++ queries.
       </>
     ),
   },
   {
-    title: "Couchbase Capella Columnar",
-    Svg: require("@site/static/img/columnar.svg").default,
+    title: "Capella Columnar",
+    Svg: CouchbaseColumnarSVG,
     description: (
       <>
-        Connect to your Capella Columnar instances. Use the cool AI assisted iQ
+        Connect to your Capella Columnar Clusters. Use the cool AI assisted iQ
         to generate your SQL++ queries.
       </>
     ),
