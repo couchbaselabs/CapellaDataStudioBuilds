@@ -55,7 +55,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: "img/DataStudio-social-card.jpg",
+      //image: "img/DataStudio-social-card.jpg",
       navbar: {
         title: "Capella DataStudio",
         logo: {
@@ -75,9 +75,14 @@ const config = {
             label: "License",
           },
           {
-            href: "https://youtu.be/TgNMSilI0WE/",
+            href: "https://www.youtube.com/watch?v=IqMLtgl84-E/",
             position: "left",
-            label: "Video Tutorial",
+            label: "Operational Tutorial",
+          },
+          {
+            href: "https://www.youtube.com/watch?v=LSh26boiHdQ/",
+            position: "left",
+            label: "Columnar Tutorial",
           },
           {
             href: "https://github.com/couchbaselabs/CapellaDataStudioBuilds",
