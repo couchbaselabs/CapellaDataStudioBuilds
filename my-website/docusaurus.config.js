@@ -5,6 +5,7 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import { themes as prismThemes } from "prism-react-renderer";
+require("dotenv").config();
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -34,7 +35,11 @@ const config = {
     defaultLocale: "en",
     locales: ["en"],
   },
-
+  // Add custom fields here
+  customFields: {
+    REACT_APP_RECAPTCHA_SITE_KEY: process.env.REACT_APP_RECAPTCHA_SITE_KEY, // Add the site key as an environment variable
+    //REACT_APP_RECAPTCHA_SITE_KEY: "6Lf28V0qAAAAAJ9ieySiM5BlrWaJur0VUqwsJshq", // Add the site key as an environment variable
+  },
   presets: [
     [
       "classic",
