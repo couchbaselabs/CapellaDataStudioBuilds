@@ -1,0 +1,17 @@
+{
+  "name": "Location Synthetic Dataset",
+  "description": "Contains city, state, country, zip, latitude, longitude, and other related location data.",
+  "version": "1.0",
+  "date": "2024-10-21",
+  "inline": {
+    "weather": ["sunny", "rain", "snow"],
+    "demographic": ["Caucasian", "African-American", "Asian"],
+    "address": "Rnd(formula.Number) + ' ' + formula.StreetName + ' ' + formula.StreetSuffix"
+  },
+  "formula": {
+    "Number": [1, 99999],
+    "StreetName": ["Oak", "Main", "3rd", "Park", "Elm"],
+    "StreetSuffix": ["Street", "Road", "Lane", "Avenue", "Drive"]
+  },
+  "files": ["location.csv"]
+}
