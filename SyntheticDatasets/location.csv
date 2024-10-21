@@ -1,0 +1,4 @@
+City,State,State(Abbrev),Zip,Latitude,Longitude,Area Code,Time Zone
+R,R,R,R,R,R,R,R
+New York,New York,NY,10001,40.7128,-74.0060,212,Eastern
+Los Angeles,California,CA,90001,34.0522,-118.2437,213,Pacific
