@@ -5,7 +5,7 @@
   "date": "2024-10-21",
   "inline": {
     "weather": ["sunny", "rain", "snow"],
-    "demographic": ["white", "black", "asian"],
+    "demographic": ["Caucasian", "African-American", "Asian"],
     "address": "Rnd(formula.Number) + ' ' + formula.StreetName + ' ' + formula.StreetSuffix"
   },
   "formula": {
