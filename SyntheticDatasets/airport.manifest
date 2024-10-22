@@ -3,5 +3,5 @@
   "description": "Contains Airport details.",
   "version": "1.0",
   "date": "2024-10-21",
-  "files": ["airport.csv"]
+  "files": ["airport.csv.zip"]
 }

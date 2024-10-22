@@ -13,5 +13,5 @@
     "StreetName": ["Oak", "Main", "3rd", "Park", "Elm"],
     "StreetSuffix": ["Street", "Road", "Lane", "Avenue", "Drive"]
   },
-  "files": ["location.csv"]
+  "files": ["location.csv.zip"]
 }

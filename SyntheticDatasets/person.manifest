@@ -3,5 +3,5 @@
   "description": "Contains first name, last name and gender.",
   "version": "1.0",
   "date": "2024-10-21",
-  "files": ["person.csv"]
+  "files": ["person.csv.zip"]
 }
