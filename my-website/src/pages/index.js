@@ -8,24 +8,31 @@ import styles from "./index.module.css";
 import macIcon from "@site/static/img/apple-logo.png";
 import WindowsIcon from "@site/static/img/windows-logo.png";
 
-import ReCAPTCHA from "react-google-recaptcha";
+import {
+  GoogleReCaptchaProvider,
+  useGoogleReCaptcha,
+} from "react-google-recaptcha-v3";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
-  const [verified, setVerified] = useState(false); // for reCAPTCHA verification
   const recaptchaSiteKey = siteConfig.customFields.REACT_APP_RECAPTCHA_SITE_KEY;
+  const { executeRecaptcha } = useGoogleReCaptcha();
 
-  const onRecaptchaChange = (value) => {
-    if (value) {
-      setVerified(true);
+  const handleDownload = async (downloadLink) => {
+    if (!executeRecaptcha) {
+      console.error("Execute recaptcha function is not available");
+      return;
     }
-  };
 
-  const triggerDownload = (downloadLink) => {
-    if (verified) {
+    // Get the token for verification
+    const token = await executeRecaptcha("download_action");
+
+    // You could optionally verify the token server-side here
+
+    if (token) {
       window.location.href = downloadLink;
     } else {
-      alert("Please verify you're not a robot.");
+      alert("Verification failed. Please try again.");
     }
   };
 
@@ -39,21 +46,35 @@ function HomepageHeader() {
 
         {/* Wrapper for reCAPTCHA and download buttons */}
         <div className={styles.recaptchaContainer}>
-          {/* Centered reCAPTCHA */}
-          <div className={styles.recaptchaBox}>
-            <ReCAPTCHA
-              sitekey={recaptchaSiteKey}
-              onChange={onRecaptchaChange}
-            />
-          </div>
-
           {/* Download buttons */}
           <div className={styles.buttons}>
+            {/* Windows Download Button */}
+            <button
+              className="button button--secondary button--lg"
+              onClick={() =>
+                handleDownload(
+                  "https://github.com/couchbaselabs/CapellaDataStudioBuilds/releases/latest/download/Capella.DataStudio.Setup.exe"
+                )
+              }
+              style={{
+                display: "flex",
+                alignItems: "center",
+                marginRight: "10px",
+              }}
+            >
+              <img
+                src={WindowsIcon}
+                alt="Windows Icon"
+                style={{ width: "24px", height: "24px", marginRight: "10px" }}
+              />
+              Download for Windows
+            </button>
+
             {/* MacOS Download Button */}
             <button
               className="button button--secondary button--lg"
               onClick={() =>
-                triggerDownload(
+                handleDownload(
                   "https://github.com/couchbaselabs/CapellaDataStudioBuilds/releases/latest/download/Capella-DataStudio-darwin-x64.zip"
                 )
               }
@@ -70,28 +91,6 @@ function HomepageHeader() {
               />
               Download for MacOS
             </button>
-
-            {/* Windows Download Button */}
-            <button
-              className="button button--secondary button--lg"
-              onClick={() =>
-                triggerDownload(
-                  "https://github.com/couchbaselabs/CapellaDataStudioBuilds/releases/latest/download/Capella.DataStudio.Setup.exe"
-                )
-              }
-              style={{
-                display: "flex",
-                alignItems: "center",
-                marginLeft: "10px",
-              }}
-            >
-              <img
-                src={WindowsIcon}
-                alt="Windows Icon"
-                style={{ width: "24px", height: "24px", marginRight: "10px" }}
-              />
-              Download for Windows
-            </button>
           </div>
         </div>
       </div>
@@ -101,12 +100,16 @@ function HomepageHeader() {
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
+  const recaptchaSiteKey = siteConfig.customFields.REACT_APP_RECAPTCHA_SITE_KEY;
+
   return (
     <Layout
       title={`Home`}
       description="Description will go into a meta tag in <head />"
     >
-      <HomepageHeader />
+      <GoogleReCaptchaProvider reCaptchaKey={recaptchaSiteKey}>
+        <HomepageHeader />
+      </GoogleReCaptchaProvider>
       <main>
         <HomepageFeatures />
       </main>
