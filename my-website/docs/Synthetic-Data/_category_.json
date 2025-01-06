@@ -1,0 +1,8 @@
+{
+  "label": "Synthetic Data",
+  "position": 9,
+  "link": {
+    "type": "generated-index",
+    "description": "This section is common to Self Managed Couchbase Databases and Capella Provisioned Databases."
+  }
+}
