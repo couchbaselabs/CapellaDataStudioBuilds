@@ -53,7 +53,6 @@ Place both the above files in **LocalStore/SyntheticData/UserTypes**
 
 This is done from the **Plugins** option in the Left **Navigation Bar**
 ![synth-typesets-plugin-local](/img/synthetic/synth-typesets-plugin-local.png)
-The above pic shows pre and post install
 
 :::info[The Install Process]
 When you click **Install**, the following happens:
@@ -66,8 +65,6 @@ When you click **Install**, the following happens:
 ### Use the Typeset
 
 After installing, the **Schema Builder** will show this Typeset in the **Type Dialog** box.
-![synth-types-pizza](/img/synthetic/synth-types-pizza.png)
-Above pic shows a schema using the pizzas typeset.
 
 ## User Typeset Working
 

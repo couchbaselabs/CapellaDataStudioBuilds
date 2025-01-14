@@ -94,40 +94,83 @@ Types can be core (built-in) or user types (imported). Core Types include:
 
 The Core Typesets will be covered in greater detail in a subsequent section, but we will cover the core.function here.
 
-## core.function.jsonArray
+## Core Function
 
-The the overview picture shows a jsonArray called _orders_, with a min and max array size.
+This is a special data type and there are three of these
 
-:::warning
+1. expression
+2. foreignKey
+3. jsonArray
 
-- You can have only simple types inside the jsonArray
-- You cannot have nested JSON objects inside a jsonArray
-- You cannot nest jsonArrays
-  :::
+### 1. core.function.expression
 
-## core.function.foreignKey
+- Expressions are a powerful way of customizing the schema.
+- Expressions are just strings
+- They can have embedded references (enclosed in %%) and functions
 
-The overview picture shows quite a few foreignKeys, but lets consider 2 fields, _customerId_ and _customerName_. To use foreignKeys, there are a couple of previous steps required. Going wih this example:
+#### Document and Expression architecture
 
-- You need a **customer.schema** with _Primary Keys_ of _id_ and _name_
-- You need to generate a dataset with the above schema.
-- The dataset generation produces **customer.json** and a **customer.pk** file.
-  - The **customer.pk** is a CSV file.
-  - It has the same number of rows as the number of documents
-  - The file structure is
-    `   id,name
-"customer_1","Lula Kuhic"
-"customer_2","Chelsea Wilderman"`
-    With the above files in place, the orders schema now allows you to choose the customer schema and the PK in drop downs. Let's see how these files are used.
-    When the documents are generated:
-- When there is a foreignKey reference, then, the .pk file is read.
-- A **random** row is chosen
-- The fields in the row are then returned and populated in the document.
+Let's see how the document is built.
 
-  :::tip
-  With this Primary Key and Foreign Key, now you can generate collections where you can use **joins** in your **SQL++**
-  :::
+- The document is built, top down, row by row.
+  - We always have a partial document at every row stage.
+- First, the expression is a string
+- It goes to an Expression Evaluator
+- The partial document, with its fields and values is supplied to the evaluator.
+  - This means, the previous fields and their evaluated values are now available.
+- The string is then examined for references
+- References are field names, previously used, and their values, from the partial document.
+- References are replaced by the values
+  - This means that references can also be inside of functions
+- The string is then examined for functions
+- The functions are then executed and their values are replaced in the partial document.
+- The Evaluator finally returns back the output.
 
-## core.function.expression
+### 2. core.function.foreignKey
 
-- Covered in the next page, **Expressions**
+#### Foreign Keys and Data Correlation
+
+When working with relational data, maintaining referential integrity through foreign keys is crucial. Here's how our synthetic data generator handles foreign key relationships:
+
+#### How Foreign Keys Work
+
+First, you'll need to generate your primary dataset. Let's say you have a schema for "Departments" that generates a CSV file containing department IDs and names. These department IDs serve as primary keys in the Departments dataset.
+
+When you create another schema, say for "Employees," you can specify fields that reference these existing primary keys. The schema builder provides two dropdown menus:
+
+- A dropdown to select the source dataset (e.g., "Departments")
+- A dropdown to select which primary key field to reference (e.g., "id")
+
+#### Data Generation Process
+
+When generating data with foreign key references, the system:
+
+- Randomly selects a row from the source dataset
+- Reads the primary key value(s) from that row
+- Uses these values in the new dataset being generated
+
+#### Maintaining Data Correlation
+
+An important feature is how we handle multiple foreign key references. If your schema references multiple columns from the same source dataset, the values are pulled from the same row to maintain logical correlation.
+
+For example, if your Employee schema references both department_id and department_location from the Departments dataset, both values will come from the same department record. This ensures that the synthetic data maintains realistic relationships between related fields.
+
+This approach helps create more realistic synthetic datasets by preserving the referential integrity and logical relationships present in real-world data.
+
+### 3. core.function.jsonArray
+
+#### JSON Array Configuration
+
+When configuring a JSON array field, you can specify:
+
+- Minimum number of objects in the array
+- Maximum number of objects in the array
+  The generator will then create arrays with a random number of objects within your specified range.
+
+#### Structure and Limitations
+
+The JSON arrays follow these rules:
+
+- Each array contains simple, flat JSON objects
+- Nesting of arrays is not supported (no arrays within arrays)
+- Each object in the array follows the same structure
