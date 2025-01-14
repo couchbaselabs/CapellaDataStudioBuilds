@@ -19,7 +19,7 @@ title: "Quick Start"
 - **Doc Preview**: Right panel
   - Use _refresh_ icon frequently when building
 - **Cheat Sheet**: Right panel
-  - Covenient Cheat Sheet for Fields and Expressions
+  - Convenient Cheat Sheet for Fields and Expressions
 
 # Quick Start
 
@@ -36,7 +36,7 @@ Complete your Setup, as described in the previous page. After Setup you will hav
 
 Make a connection to Capella Operational or Couchbase Server
 
-- This is neccesary for loading data
+- This is necessary for loading data
 - You can defer this for later if you plan just generating schemas and datasets.
 
 ## Step 3

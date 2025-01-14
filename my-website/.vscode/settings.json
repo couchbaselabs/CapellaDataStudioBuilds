@@ -1,0 +1,7 @@
+{
+  "cSpell.words": ["capds", "Couchbase", "datatools", "localstore", "stddev"],
+  "workbench.colorCustomizations": {
+    "editorInfo.foreground": "#ff0000", // Changes the color of underlines for Code Spell Checker
+    "editorInfo.border": "#ff0000" // Changes the border for inline diagnostics
+  }
+}

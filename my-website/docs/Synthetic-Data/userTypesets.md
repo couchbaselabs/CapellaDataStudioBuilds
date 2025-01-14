@@ -3,7 +3,7 @@ sidebar_position: 6
 title: "User Typesets"
 ---
 
-# User Typsets
+# User Typesets
 
 ## Files
 
@@ -32,7 +32,7 @@ Garden Fresh Delight,10.0,"arrayItem(['pan','thin crust','deep dish','stuffed cr
 ```json
 {
   "name": "pizzas",
-  "provider": "prasad",
+  "provider": "acme",
   "description": "Different types of pizzas",
   "version": "1.0",
   "date": "2024-10-21",
@@ -95,14 +95,14 @@ Garden Fresh Delight,10.0,"arrayItem(['pan','thin crust','deep dish','stuffed cr
 Now, the **pizzas.name** is straight forward and tge value is _Garden Fresh Delight_<br></br>
 **pizzas.type** is actually: _arrayItem(['pan','thin crust','deep dish','stuffed crust'])_<br></br>
 
-- This actually outputs: _thin crust_ (for eaxmple)
+- This actually outputs: _thin crust_ (for example)
   So, what happens is:
 - The row field is read
 - It is passed to an **Expressions Evaluator**, irrespective of what it contains
 - In above example, it is a function, _arrayItem_ which takes in an array and emits one random item from the array.
 
 :::tip
-User Typsets are **seed** data, used to generate a huge amount of Synthetic data.<br></br>
+User Typesets are **seed** data, used to generate a huge amount of Synthetic data.<br></br>
 You can make this data as realistic as possible. In the pizzas example, the **price**, in USD is very realistic.<br></br>
 **Expressions** in the CSV file, make it completely customizable.
 :::

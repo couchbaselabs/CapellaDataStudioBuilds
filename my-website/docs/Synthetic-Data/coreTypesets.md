@@ -3,7 +3,7 @@ sidebar_position: 5
 title: "Core Typesets"
 ---
 
-# Core Typsets
+# Core Typesets
 
 These are the built-in types
 :::tip[Core types can be either unrelated or correlated.]
@@ -11,7 +11,7 @@ These are the built-in types
 - **Unrelated**
   - Truly random data. For example, the **person** type is unrelated. For example, if you choose firstName, lastName and fullName, each one of these is randomly output som fullName will not be the chosen firstName and lastName.
 - **Correlated**
-  - Related data. For example, the **location** data is correlated. For example, if you choose city, state, zip, phone, all these will be accurate in the sense, city will be guranteed to be in the state with correct zip and phone numbers will have the right area code.
+  - Related data. For example, the **location** data is correlated. For example, if you choose city, state, zip, phone, all these will be accurate in the sense, city will be guaranteed to be in the state with correct zip and phone numbers will have the right area code.
 
 :::
 

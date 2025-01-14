@@ -90,6 +90,11 @@ const config = {
             label: "Columnar Tutorial",
           },
           {
+            href: "https://www.youtube.com/watch?v=_21RzBoCA_0/",
+            position: "left",
+            label: "Synthetic Data Tutorial",
+          },
+          {
             href: "https://github.com/couchbaselabs/CapellaDataStudioBuilds",
             label: "GitHub",
             position: "right",

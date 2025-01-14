@@ -9,7 +9,7 @@ Once the schema has been built to you satisfaction, it's time to generate data.
 <img src="/img/synthetic/synth-generate-dataset.png" width="600"
 alt="generate-dataset" />
 
-- Dataset is generated and writen to _LocalStore/SyntheticData/DataSets/_
+- Dataset is generated and written to _LocalStore/SyntheticData/DataSets/_
 - The dataset filename is _schemaName.json_
   - This is a _JSON Lines_ file
   - If the document has fields marked as Primary Key (prefixed with double-dash), then, a _schemaName.pk_ is also produced
@@ -19,7 +19,7 @@ alt="generate-dataset" />
 
 # Datasets
 
-Once the datasets have been generated, they can be previewed from the Datsets tab.
+Once the datasets have been generated, they can be previewed from the Datasets tab.
 ![synth-datasets-1](/img/synthetic/synth-datasets-1.png)
 
 - This shows the json view of the documents

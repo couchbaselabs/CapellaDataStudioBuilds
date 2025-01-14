@@ -8,7 +8,7 @@ title: "Expressions"
 Expressions are a powerful way of customizing the schema. How do they work?
 
 - Expressions are just strings
-- They can have embbeded **references** (enclosed in %%) and **functions**
+- They can have embedded **references** (enclosed in %%) and **functions**
 
 ## Example
 
@@ -38,7 +38,7 @@ From the above, we can see how Expressions work. But first, let's see how the do
 - First, the expression is a string
 - It goes to an **Expression Evaluator**
   - The partial document, with its fields and values is supplied to the evaluator.
-    - This means, the previous fields and their evluated values are now available.
+    - This means, the previous fields and their evaluated values are now available.
 - The string is then examined for **references**
   - References are field names, previously used, and their values, from the partial document.
   - References are replaced by the values

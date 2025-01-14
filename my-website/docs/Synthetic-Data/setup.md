@@ -5,7 +5,7 @@ title: "Setup"
 
 # Setup
 
-Baiscally, only a couple of things are needed to start using the **Synthetic Data Generator**
+Basically, only a couple of things are needed to start using the **Synthetic Data Generator**
 
 - Local Store
 - Data Tools Plugin

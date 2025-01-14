@@ -72,7 +72,7 @@ alt="synth-config-1" />
   - Deeply nested JSON supported
 - Field Names with a double dash prefix will be treated as a Primary Key
   - When Generating Datasets, these keys will also be exported and will be saved as localStore/SyntheticData/DataSets/schemaName.pk file
-  - Prinary Keys can be specified only in fields in root document
+  - Primary Keys can be specified only in fields in root document
     - JSON Objects cannot be Primary Key
     - Nested Fields cannot be Primary Key
     - Hidden fields cannot be Primary Key
@@ -118,7 +118,7 @@ The overview picture shows quite a few foreignKeys, but lets consider 2 fields, 
     `   id,name
 "customer_1","Lula Kuhic"
 "customer_2","Chelsea Wilderman"`
-    With the above files in place, the orders schema now allows you to choose the custimer schema and the PK in drop downs. Let's see how these files are used.
+    With the above files in place, the orders schema now allows you to choose the customer schema and the PK in drop downs. Let's see how these files are used.
     When the documents are generated:
 - When there is a foreignKey reference, then, the .pk file is read.
 - A **random** row is chosen

@@ -24,7 +24,7 @@ Our generator ensures data relationships are meaningful. For example, addresses 
 
 ## Built-in Typesets, Fully Configurable
 
-Choose from a wide array of built-in typesets to jumpstart your data generation. Each type can be customized to suit your specific needs, whether it’s names, locations, dates, or numeric fields.
+Choose from a wide array of built-in typesets to jump start your data generation. Each type can be customized to suit your specific needs, whether it’s names, locations, dates, or numeric fields.
 
 ## Extendible: Bring Your Own Typesets
 
